@@ -1,0 +1,39 @@
+<!-- <div *ngFor="let a of getHttpvalue" fxLayout="row" fxLayoutAlign="space-around center">
+<p>{{a.original_language}}</p>
+<p>{{a.original_title}}</p>
+<p>{{a.overview}}</p>
+<p>{{a.popularity}}</p>
+<div  fxLayout="row" >
+    <img src="{{a.backdrop_path}}" >
+ </div>
+<p>{{a.title}}</p>
+</div> -->
+<div fxLayout="row" fxLayoutAlign="center center">
+<mat-form-field class="example-full-width"  appearance="outline">
+       <input matInput placeholder="Search" >
+        <mat-icon class="iconColor" matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20px" fxLayout.lt-sm="column" >
+<ng-container *ngFor="let a of getHttpvalue; let i=index" >
+    <div fxFlex-sm="25%">
+<mat-card class="card2" appHover  (click)="viewProduct(a)" >
+   <img class="img" mat-card-image src= "{{a.poster_path}}" alt="" >
+    <mat-card-actions>
+      <div fxLayout="row" fxLayoutAlign="start start" >
+       <p> {{a.original_title}}</p>
+    </div>
+    </mat-card-actions>	
+</mat-card>
+<br>
+<br>
+</div>
+</ng-container>
+</div>
+
+<mat-paginator [length]="7"
+              [pageSize]="1"
+              aria-label="Select page"
+              hidePageSize="true"
+              (page)="onPaginateChange($event)">
+</mat-paginator>

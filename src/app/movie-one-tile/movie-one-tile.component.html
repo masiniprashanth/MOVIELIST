@@ -1,0 +1,42 @@
+<div class="backGround">
+<div fxFlex="50" fxLayout="column" fxLayoutGap="68px" >
+    <div>
+    <span></span>
+</div>
+    <div>
+    <mat-icon (click)="back()">
+        arrow_back
+    </mat-icon>
+<h4>{{getArray.title}}</h4>
+<div>
+    <span fxFlex="20">Rating:</span>
+<p>{{getArray.vote_average}}/10</p>
+</div>
+<p>{{getArray.overview}}</p>
+<div>
+    <span fxFlex="20">Relaese Date:</span>
+<p>{{getArray.release_date}}</p>
+</div>
+<div> 
+    <span fxFlex="20">Relaese Date:</span>
+    <p>Original Language:{{getArray.original_language}}</p>
+</div>
+
+</div>
+</div>
+<div fxFlex="50">
+    <img class="imagecls"  src= "{{getArray.backdrop_path}}" alt="" >
+</div>
+</div>
+
+<!-- original_language: "en"
+original_title: "Office Invasion"
+overview: "Three friends come together to defend their valuable mining company from…aliens?! What could possibly go wrong?"
+popularity: 1333.773
+poster_path: "https://image.tmdb.org/t/p/w500//kDC9Q3kiVaxrJijaGeZ8ZB2ZoiX.jpg"
+release_date: "2022-08-10"
+title: "Office Invasion"
+video: false
+vote_average: 5.9
+vote_count: 74
+[[Prototype]]: Object -->
